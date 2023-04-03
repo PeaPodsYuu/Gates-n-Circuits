@@ -3,30 +3,20 @@
 [ext_resource path="res://data/player/Bool.png" type="Texture" id=1]
 [ext_resource path="res://data/player/Player.gd" type="Script" id=2]
 
-[sub_resource type="AtlasTexture" id=24]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 128, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=30]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 128, 128, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=31]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 0, 128, 128, 128 )
-
 [sub_resource type="AtlasTexture" id=35]
 flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 384, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=32]
+[sub_resource type="AtlasTexture" id=26]
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 0, 256, 128, 128 )
+region = Rect2( 128, 384, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=27]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 384, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=25]
 flags = 4
@@ -43,6 +33,26 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 256, 0, 128, 128 )
 
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 128, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 128, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 256, 128, 128 )
+
 [sub_resource type="AtlasTexture" id=33]
 flags = 4
 atlas = ExtResource( 1 )
@@ -53,36 +63,16 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 256, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=26]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 128, 384, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=27]
-flags = 4
-atlas = ExtResource( 1 )
-region = Rect2( 256, 384, 128, 128 )
-
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ SubResource( 24 ) ],
-"loop": true,
-"name": "left_default",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 30 ), SubResource( 31 ) ],
-"loop": true,
-"name": "left_walk",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 35 ) ],
 "loop": true,
 "name": "back_default",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 32 ) ],
+"frames": [ SubResource( 26 ), SubResource( 27 ) ],
 "loop": true,
-"name": "right_default",
+"name": "back_walk",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 25 ) ],
@@ -95,14 +85,24 @@ animations = [ {
 "name": "front_walk",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 24 ) ],
+"loop": true,
+"name": "left_default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 30 ), SubResource( 31 ) ],
+"loop": true,
+"name": "left_walk",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 32 ) ],
+"loop": true,
+"name": "right_default",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 33 ), SubResource( 34 ) ],
 "loop": true,
 "name": "right_walk",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 26 ), SubResource( 27 ) ],
-"loop": true,
-"name": "back_walk",
 "speed": 5.0
 } ]
 

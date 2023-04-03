@@ -30,7 +30,15 @@ func arrange_items():
 	button.name = "button"
 	add_child(button)
 	
+	var button2 = preload("res://data/objects/button.tscn").instance()
+	button2.scale = Vector2(0.5,0.5)
+	button2.position = (Vector2(128,128)*4 + Vector2(0,-140))
+	button2.name = "button2"
+	add_child(button2)
+	
+	
+	
 	add_cable_vert(Vector2(128,128)*4 + Vector2(0,64))
 	add_cable_vert(Vector2(128,128)*4 + Vector2(0,128))
-	add_cable_vert(Vector2(128,128)*4 + Vector2(0,-64))
-	add_cable2_hor(Vector2(128,128)*4 + Vector2(0,-64))
+	add_cable_vert(Vector2(128,128)*4 + Vector2(0,-200))
+	add_cable2_hor(Vector2(128,128)*4 + Vector2(0,-200))

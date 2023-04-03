@@ -21,7 +21,7 @@ extents = Vector2( 10, 66.5 )
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 8
-collision_mask = 24
+collision_mask = 28
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

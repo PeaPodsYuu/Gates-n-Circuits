@@ -5,7 +5,8 @@ var speed = 200
 signal stomp
 
 func _ready():
-	$Stomp_Hitbox
+	$Stomp.name = "Stomp"
+	pass
 	
 func _process(delta):
 	var velocity = Vector2.ZERO
