@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://data/textures/Graphics.png" type="Texture" id=1]
+[ext_resource path="res://data/objects/XOR.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 256, 768, 128, 128 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 16
+collision_mask = 28
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 24, -31, -25, -30, -4, -70, 3, -70 )
+
+[node name="Rx" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rx"]
+polygon = PoolVector2Array( -41, 4, -53, 25, -53, 69, -14, 35, 18, 35, 50, 68, 50, 20, 42, 3 )
