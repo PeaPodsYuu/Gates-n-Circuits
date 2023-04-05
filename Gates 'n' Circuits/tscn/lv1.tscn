@@ -229,6 +229,7 @@ script = ExtResource( 2 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1600.0
 margin_bottom = 900.0
+mouse_filter = 2
 color = Color( 0.133333, 0.133333, 0.133333, 1 )
 
 [node name="TileMap" type="TileMap" parent="."]

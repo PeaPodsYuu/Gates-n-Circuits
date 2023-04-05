@@ -9,6 +9,7 @@
 [node name="ColorRect" type="ColorRect" parent="BG"]
 margin_right = 1600.0
 margin_bottom = 900.0
+mouse_filter = 2
 color = Color( 0.133333, 0.133333, 0.133333, 1 )
 
 [node name="ScriptTest" type="Node2D" parent="."]
