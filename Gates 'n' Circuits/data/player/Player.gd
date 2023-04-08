@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 200
+var speed = 15000
 var velocity = Vector2.ZERO
 onready var source = get_node("../gamepad")
 
@@ -47,7 +47,7 @@ func _process(delta):
 		if sprite.animation == "right_walk":
 			sprite.play("right_default")
 	
-	move_and_collide(velocity*delta)
+	move_and_slide(velocity*delta)
 	velocity = Vector2.ZERO
 
 func move_with_pad(dir):

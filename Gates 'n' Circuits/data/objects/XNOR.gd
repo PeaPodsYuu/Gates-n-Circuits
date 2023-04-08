@@ -27,28 +27,31 @@ func _ready():
 	pass # Replace with function body.
 
 func get_coll():
-	for source in $Rx.get_overlapping_areas():
+	for source in get_overlapping_areas():
 		if "button" in source.get_filename():
 			sources.append(source)
 
 func power():
-	var ok = 1
+	var on = 0
+	var count = 0
 	for source in $Rx.get_overlapping_areas():
+		count += 1
 		if ("active" in source):
-			if(source.active == 0):
-				ok = 0
-	if ok == 1:
+			if(source.active == 1):
+				on += 1
+	if on == 0 || on == count:
 		$AnimatedSprite.modulate = Color(1,1,1)
 		active = 1
 
 func off():
-	var ok = 0
-	
+	var on = 0
+	var count = 0
 	for source in $Rx.get_overlapping_areas():
+		count += 1
 		if ("active" in source):
-			if(source.active == 0):
-				ok = 1
-	if ok == 1:
+			if(source.active == 1):
+				on += 1
+	if on > 0 && on < count:
 		$AnimatedSprite.modulate = Color(0,0,0)
 		active = 0
 

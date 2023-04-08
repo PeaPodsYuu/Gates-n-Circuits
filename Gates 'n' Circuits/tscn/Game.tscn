@@ -12,5 +12,5 @@ margin_bottom = 900.0
 mouse_filter = 2
 color = Color( 0.133333, 0.133333, 0.133333, 1 )
 
-[node name="ScriptTest" type="Node2D" parent="."]
+[node name="LevelCreator" type="Node2D" parent="."]
 script = ExtResource( 1 )
