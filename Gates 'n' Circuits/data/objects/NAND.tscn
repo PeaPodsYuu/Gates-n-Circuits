@@ -25,4 +25,11 @@ script = ExtResource( 2 )
 frames = SubResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 11, -35, 62, 10, 62, 31, -62, 31, -62, 10, -11, -35, -4, -70, 3, -70 )
+polygon = PoolVector2Array( 11, -35, 31, -16, -33, -16, -11, -35, -4, -70, 3, -70 )
+
+[node name="Rx" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rx"]
+polygon = PoolVector2Array( -59, 28, 61, 28, 61, 7, -59, 7 )

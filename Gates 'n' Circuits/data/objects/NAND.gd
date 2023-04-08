@@ -27,13 +27,13 @@ func _ready():
 	pass # Replace with function body.
 
 func get_coll():
-	for source in get_overlapping_areas():
+	for source in $Rx.get_overlapping_areas():
 		if "button" in source.get_filename():
 			sources.append(source)
 
 func power():
 	var ok = 0
-	for source in get_overlapping_areas():
+	for source in $Rx.get_overlapping_areas():
 		if ("active" in source):
 			if(source.active == 0):
 				ok = 1
@@ -43,7 +43,7 @@ func power():
 
 func off():
 	var ok = 1
-	for source in get_overlapping_areas():
+	for source in $Rx.get_overlapping_areas():
 		if ("active" in source):
 			if(source.active == 0):
 				ok = 0

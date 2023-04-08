@@ -11,9 +11,8 @@ func _ready():
 
 func base_settings(node,pos):
 	print(node)
-	node.scale = Vector2(0.5,0.5)
-	node.position.x = pos.x*64
-	node.position.y = pos.y*64
+	node.position.x = pos.x*128+64
+	node.position.y = pos.y*128+64
 
 func add_cable_vert(pos):
 	var cable = preload("res://data/objects/Cable.tscn").instance()
@@ -48,7 +47,8 @@ func add_cable_bend(pos,rot):
 func add_button(pos,size):
 	var button = preload("res://data/objects/button.tscn").instance()
 	base_settings(button,pos)
-	button.scale += size
+	button.scale.x += size
+	button.scale.y += size
 	add_child(button)
 
 func add_and_gate(pos,rot,size):

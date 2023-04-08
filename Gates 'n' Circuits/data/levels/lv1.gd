@@ -13,34 +13,33 @@ var spawn_pos = Vector2(128,128)*6
 func _ready():
 	spawn_player()
 	
-	#for the and
-	add_button(Vector2(3,2),Vector2(0,0))
-	add_button(Vector2(5,2),Vector2(0,0))
-	
-	add_cable_vert(Vector2(3,3))
-	add_cable_bend(Vector2(3,4),-PI/2)
-	add_cable_vert_scaled(Vector2(3.5,4.25),-0.25)
-	
-	add_cable_bend(Vector2(5,3),PI)
-	add_cable_bend(Vector2(4,3),0)
-	add_cable_vert(Vector2(4,4))
-	
-	add_and_gate(Vector2(3.75,4.5),PI,Vector2.ZERO)
-	add_cable_vert_scaled(Vector2(3.75,7),1.5)
-	
-	#--------------------------------
-	
-	add_cable_vert_scaled(Vector2(5,3.25),-0.25)
-	add_cable_vert(Vector2(5,4))
-	add_cable_vert(Vector2(5,5))
-	add_cable_vert(Vector2(5,6))
-	add_cable_bend(Vector2(5,7),-PI/2)
-	 
-	add_button(Vector2(7,2),Vector2(0,0))
-	add_button(Vector2(9,2),Vector2(0,0))
+	add_button(Vector2(1,1),0)
+	add_cable_vert_scaled(Vector2(1,1.625),-0.75)
+	add_cable_bend(Vector2(1,2.25),-PI/2)
+	add_cable_hor(Vector2(2,2.25))
 	
 	
-	add_button(Vector2(11,2),Vector2(0,0))
+	add_button(Vector2(2,1),0)
+	add_cable_bend(Vector2(2,2),-PI/2)
+	
+	add_cable_hor_scaled(Vector2(2.625,2),-0.625)
+	add_cable_hor_scaled(Vector2(2.625,2.25),-0.625)
+	add_and_gate(Vector2(3,2),PI/2,Vector2.ZERO)
+	
+	add_cable_vert_scaled(Vector2(1,2.5),-0.5)
+	add_cable_bend(Vector2(1,3),-PI/2)
+	add_cable_hor_scaled(Vector2(2.5,3),1)
+	add_cable_bend(Vector2(3.5,2.25),0)
+	add_cable_vert_scaled(Vector2(3.5,2.875),-0.75)
+	
+	add_cable_hor_scaled(Vector2(3.625,2),-0.625)
+	add_xor_gate(Vector2(4,2),PI/2,Vector2.ZERO)
+	
+	add_cable_hor(Vector2(3,1))
+	add_not_gate(Vector2(3.5,1),PI/2,Vector2.ZERO)
+	add_cable_hor_scaled(Vector2(4.25,1),-0.5)
+	
+	
 	pass # Replace with function body.
 
 func spawn_player():
