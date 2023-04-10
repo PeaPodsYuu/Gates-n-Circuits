@@ -17,7 +17,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10, 66.5 )
+extents = Vector2( 7, 66.5 )
 
 [node name="Area2D" type="Area2D"]
 collision_layer = 8

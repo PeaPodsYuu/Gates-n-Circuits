@@ -32,4 +32,4 @@ collision_layer = 16
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rx"]
-polygon = PoolVector2Array( -41, 4, -53, 25, -53, 69, -14, 35, 18, 35, 53, 67, 53, 21, 42, 3 )
+polygon = PoolVector2Array( -41, 4, -48, 21, -48, 39, -14, 35, 18, 35, 49, 36, 50, 20, 42, 3 )

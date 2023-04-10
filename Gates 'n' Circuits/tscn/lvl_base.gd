@@ -47,8 +47,8 @@ func add_cable_bend(pos,rot):
 func add_button(pos,size):
 	var button = preload("res://data/objects/button.tscn").instance()
 	base_settings(button,pos)
-	button.scale.x += size
-	button.scale.y += size
+	button.scale.x += size.x
+	button.scale.y += size.y
 	add_child(button)
 
 func add_and_gate(pos,rot,size):

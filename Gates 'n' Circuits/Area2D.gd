@@ -12,7 +12,7 @@ func _ready():
 	yield(get_tree().create_timer(1), "timeout")
 	
 	var timer = Timer.new()
-	timer.set_wait_time(0.1)
+	timer.set_wait_time(0.05)
 	timer.set_one_shot(false)
 	timer.connect("timeout",self,"update")
 	add_child(timer)
@@ -32,22 +32,32 @@ func get_coll():
 			sources.append(source)
 
 func power():
+	var count = 0
+	var total = 0
 	for source in get_overlapping_areas():
 		if ("active" in source):
+			total +=1
 			if(source.active == 1):
-				$AnimatedSprite.modulate = Color(1,1,1)
-				active = 1
+				count +=1
+	if rand_range(0,total) <= count:
+		$AnimatedSprite.modulate = Color(1,1,1)
+		active = 1
 
 func off():
+	var count = 0
+	var total = 0
 	for source in get_overlapping_areas():
 		if ("active" in source):
-			if(source.active == 0):
-				$AnimatedSprite.modulate = Color(0,0,0)
-				active = 0
+			total +=1
+			if(source.active == 1):
+				count +=1
+	if rand_range(0,total) > count:
+		$AnimatedSprite.modulate = Color(0,0,0)
+		active = 0
 
 func update():
 	power()
-	yield(get_tree().create_timer(0.1), "timeout")
+	yield(get_tree().create_timer(0.05), "timeout")
 	off()
-	yield(get_tree().create_timer(0.1), "timeout")
+	yield(get_tree().create_timer(0.05), "timeout")
 
