@@ -11,7 +11,7 @@ var active = 0
 # var b = "text"
 
 func _ready():
-	get_node("../../player_instance").connect("stomp",self,"stomp")
+	get_parent().get_node("Player").connect("stomp",self,"stomp")
 
 func stomp():
 	for source in get_overlapping_areas():

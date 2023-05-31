@@ -9,7 +9,12 @@ var spawn_pos = Vector2(128,128)*6
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.text="^ Press to Win!\n\nThis is a \ntutorial level!\n\nAND: All inputs must \nbe true to activate.\n\nOR: Any input must be true to \nactivate (one or more!)\n\nNOT: Will output the \nopposite of the input."
+	$JACK.active = 1
+	$Label.text="What do you think about this?\nJill AND Jane are best friends. They want to \nbe together!\nJack is pushy and wants to be friends too, \nbut the girls don't want to.\nJack should NOT be friends with Jane and Jill.\nCan you solve their connundrum?"
+	$Label2.text="But there's a\nnew,scary\ngate! Don't\nworry, that's\njust NAND\n(not and).\nIt simply acts\nlike an AND\ngate followed\nby a NOT!"
+	$JACK/Label.text="Jack"
+	$JILL/Label.text="Jill"
+	$JANE/Label.text="Jane"
 	spawn_player()
 	var win_check = Timer.new()
 	win_check.set_one_shot(false)
@@ -26,5 +31,5 @@ func spawn_player():
 	$Player.z_index = 1
 
 func _win_timer():
-	if($WINBUTTON.active == 1):
-		get_parent().win_level(1)
+	if $FINALAND.active == 1:
+		get_parent().win_level(4)

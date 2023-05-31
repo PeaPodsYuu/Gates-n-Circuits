@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://tscn/ScriptTest.gd" type="Script" id=1]
+[ext_resource path="res://tscn/Level_Select.gd" type="Script" id=2]
 
 [node name="Game" type="Node2D"]
 
@@ -14,3 +15,15 @@ color = Color( 0.133333, 0.133333, 0.133333, 1 )
 
 [node name="LevelCreator" type="Node2D" parent="."]
 script = ExtResource( 1 )
+
+[node name="Level_Select" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="Level_Select"]
+margin_left = 100.0
+margin_top = 50.0
+margin_right = 1500.0
+margin_bottom = 850.0
+
+[node name="Levels" type="Area2D" parent="Level_Select/ColorRect"]
+position = Vector2( -100, -100 )

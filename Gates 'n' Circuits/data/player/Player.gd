@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var speed = 200
 var velocity = Vector2.ZERO
-onready var source = get_node("../gamepad")
+onready var source = get_node("../../gamepad")
 
 signal stomp
 
