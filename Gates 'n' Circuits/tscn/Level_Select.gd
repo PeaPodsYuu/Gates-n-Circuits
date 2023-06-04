@@ -42,8 +42,8 @@ func _ready():
 		label.text = String(i)
 		button.add_child(label)
 		
-		
-		add_child(button)
+		if i <= 5:
+			add_child(button)
 	
 	update_allowance()
 

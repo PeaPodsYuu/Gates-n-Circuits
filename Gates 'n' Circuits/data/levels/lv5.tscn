@@ -420,6 +420,6 @@ rotation = 1.5708
 scale = Vector2( 1, 0.5 )
 
 [node name="FINALOR" parent="." instance=ExtResource( 5 )]
-position = Vector2( 874, 507 )
+position = Vector2( 875, 508 )
 rotation = 1.5708
 scale = Vector2( 3, 3 )
